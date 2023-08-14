@@ -12,7 +12,6 @@ provision:
   - url:
       from: https://downloads.sourceforge.net/libtirpc/libtirpc-{{ .version }}.tar.bz2
       wget: true
-      todir: "{{ .xbee.src }}"
 
 build:
   - shell:
