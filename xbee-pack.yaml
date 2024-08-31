@@ -11,7 +11,7 @@ var:
 
 provision:
   - url:
-      from: https://downloads.sourceforge.net/libtirpc/libtirpc-{{ .version }}.tar.bz2
+      from: https://downloads.sourceforge.net/libtirpc/libtirpc-{{ .xbee.version }}.tar.bz2
       wget: true
 
 build:
@@ -20,6 +20,6 @@ build:
         - ./configure --prefix=/usr --sysconfdir=/etc --disable-static --disable-gssapi
         - make
         - make install DESTDIR={{ .xbee.out }}
-      directory: "{{ .xbee.src }}/libtirpc-{{ .version }}"
+      directory: "{{ .xbee.src }}/libtirpc-{{ .xbee.version }}"
 
 
