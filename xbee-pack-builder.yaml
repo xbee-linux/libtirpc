@@ -14,7 +14,7 @@ provision:
 
 build:
   - shell:
-      cmds:
+      cmd:
         - ./configure --prefix=/usr --sysconfdir=/etc --disable-static --disable-gssapi
         - make
         - make install DESTDIR={{ .xbee.out }}
