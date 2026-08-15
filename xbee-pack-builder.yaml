@@ -9,7 +9,7 @@ var:
 
 provision:
   - url:
-      from: https://security.ubuntu.com/ubuntu/pool/main/libt/libtirpc/libtirpc_{{ .xbee.version }}.orig.tar.bz2
+      from: https://downloads.sourceforge.net/libtirpc/libtirpc-{{ .xbee.version }}.tar.bz2
 
 build:
   - shell:
@@ -18,4 +18,3 @@ build:
         - make
         - make install DESTDIR={{ .xbee.out }}
       directory: "{{ .xbee.src }}/libtirpc-{{ .xbee.version }}"
-
